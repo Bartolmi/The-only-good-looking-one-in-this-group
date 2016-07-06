@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MenuEventSheet</name>
+    <events>
+        <event-block sid="3447242970268307">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2816226779231483" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="1167121967517171" type="System">
+                    <param id="0" name="Width">1708</param>
+                    <param id="1" name="Height">960</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8983619236920098">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="3671739789565725" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">tutorialButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="1366749785210585" type="System">
+                    <param id="0" name="Layout">Tutorial</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

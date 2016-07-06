@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TutorialEventSheet</name>
+    <events>
+        <variable constant="0" name="lives" sid="8195229040858023" static="0" type="number">3</variable>
+        <event-block sid="2338560267530806">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8404879676684357" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="4316385738162008" type="System">
+                    <param id="0" name="Width">1000</param>
+                    <param id="1" name="Height">500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1262470791593613">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4680669691348416" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="6294160940403116" type="player">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="7586203681627619" type="catEnemy">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1803511032678185">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="3982128814970188" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="4287629489288568" type="player">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="2511693789514737" type="catEnemy">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8111176953474254">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="2073003126739856" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="737057346847797" type="player">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="8106077141167995" type="catEnemy">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4275545025193665">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="726576900712468" type="player">
+                    <param id="0" name="Object">coin</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4911987176977324" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">score+10</param>
+                </action>
+                <action id="0" name="Set text" sid="9495833551545501" type="score">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; score </param>
+                </action>
+                <action id="-9" name="Destroy" sid="525117315674361" type="coin" />
+            </actions>
+        </event-block>
+        <event-block sid="2166543964246968">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8207865104012975" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="5878637958587598" type="score">
+                    <param id="0" name="Pin to">player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2109934356479503">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3820378259696904" type="player">
+                    <param id="0" name="Object">Sprite9</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="6395082188838641" type="System">
+                    <param id="0" name="Layout">&quot;Menu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1501371485712164">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7803767839194134" type="player">
+                    <param id="0" name="Object">spikes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2661113638338606" type="player" />
+                <action id="-26" name="Restart layout" sid="2448180855031711" type="System" />
+                <action id="-9" name="Set value" sid="4630137064155284" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3995428510549417">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8469633168229071" type="player">
+                    <param id="0" name="Object">catEnemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3507388550746665" type="player" />
+                <action id="-26" name="Restart layout" sid="6877928369427517" type="System" />
+                <action id="-9" name="Set value" sid="553707667186512" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9892525938527762">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="1643839088960535" type="catEnemy">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">1925</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="6451955177331129" type="catEnemy">
+                    <param id="0" name="Instance variable">isRight</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8181900832240837">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="7997349344648833" type="catEnemy">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">1645</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="8564661757628326" type="catEnemy">
+                    <param id="0" name="Instance variable">isRight</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1283806014086269">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="2713702662536185" type="catEnemy">
+                    <param id="0" name="Instance variable">isRight</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="728166079529134" type="catEnemy">
+                    <param id="0" name="X">catEnemy.X +1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="1985637950887276" type="catEnemy">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4893386816681036">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1590086547550412" type="catEnemy">
+                    <param id="0" name="Instance variable">isRight</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="1661649137944019" type="catEnemy">
+                    <param id="0" name="X">catEnemy.X-1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="2323667961868437" type="catEnemy">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
