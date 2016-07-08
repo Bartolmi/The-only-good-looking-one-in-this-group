@@ -683,7 +683,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2092888841414403" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Final Project\hola-me-llamo-miguel\images\Cat walk.png">
+                    <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="D:\Final Project\hola-me-llamo-miguel\images\Cat walk.png">
                         <collision-poly>
                             <point x="0.694286" y="0.5" />
                             <point x="0.660476" y="0.524667" />
@@ -840,7 +840,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1707511006458989" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -848,7 +848,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9597922577334902" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Final Project\hola-me-llamo-miguel\Animations\Tommy\Default\000.png">
+                    <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="D:\Final Project\hola-me-llamo-miguel\Animations\Tommy\Default\000.png">
                         <collision-poly>
                             <point x="0.348095" y="0.487333" />
                             <point x="0.5" y="0.471333" />

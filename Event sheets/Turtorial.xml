@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TutorialEventSheet</name>
+    <events>
+        <include>PlayerMovement</include>
+        <include>PlayerMovement</include>
+        <event-block sid="8592100948224656">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3996730654199813" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="7539210546375504" type="System">
+                    <param id="0" name="Width">840</param>
+                    <param id="1" name="Height">480</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2850146509061588">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8702169465549683" type="Player">
+                    <param id="0" name="Object">Spikes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="3355879303606951" type="System" />
+                <action id="-9" name="Set value" sid="7914316029101313" type="System">
+                    <param id="0" name="Variable">scores</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4278397819689352">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2552909935553456" type="Player">
+                    <param id="0" name="Object">EnemyCat</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="842800590917057" type="System" />
+                <action id="-9" name="Set value" sid="4360952325631422" type="System">
+                    <param id="0" name="Variable">scores</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="601354176413684">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6444313250076416" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Timer" id="0" name="Start timer" sid="7898523803338243" type="EnemyCat">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">1</param>
+                    <param id="2" name="Tag">&quot;Shoot&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9921099556442646">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="4342853822238598" type="EnemyCat">
+                    <param id="0" name="Tag">&quot;Shoot&quot;</param>
+                </condition>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="8976256173257115" type="EnemyCat">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="1844039279193345" type="EnemyCat">
+                    <param id="0" name="Object">EnemyBullet</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9680519672802926" type="EnemyBullet">
+                    <param id="0" name="Angle">180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9338145145658237">
+            <conditions>
+                <condition id="0" name="On click" sid="792842498795521" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="3613344774542059" type="Player">
+                    <param id="0" name="Object">PlayerBullet</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1589843201964117">
+            <conditions>
+                <condition id="-18" name="On created" sid="1524265328173495" type="PlayerBullet" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="4083356250847652" type="PlayerBullet">
+                    <param id="0" name="X">mouse.X</param>
+                    <param id="1" name="Y">mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="107130462310839">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5032242293836801" type="Player">
+                    <param id="0" name="Object">EnemyBullet</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="8827048599823085" type="System" />
+                <action id="-9" name="Set value" sid="1304533723554942" type="System">
+                    <param id="0" name="Variable">scores</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3901953804260057">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6191793306680746" type="EnemyCat">
+                    <param id="0" name="Object">PlayerBullet</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="613761553689551" type="EnemyCat">
+                    <param id="0" name="Instance variable">lives</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="3950687828366546" type="PlayerBullet" />
+            </actions>
+        </event-block>
+        <event-block sid="5526924025960638">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="2510928104136524" type="EnemyCat">
+                    <param id="0" name="Instance variable">lives</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6022898352257667" type="EnemyCat" />
+            </actions>
+        </event-block>
+        <event-block sid="3757947292601345">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8653606905205371" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="1940493463023176" type="score">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4690803807177158">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8329136628267823" type="PlayerBullet">
+                    <param id="0" name="Object">Earth</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1421147829415833" type="PlayerBullet" />
+            </actions>
+        </event-block>
+        <event-block sid="2210523559668258">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3846145436843642" type="EnemyBullet">
+                    <param id="0" name="Object">Earth</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6012799548421319" type="EnemyBullet" />
+            </actions>
+        </event-block>
+        <event-block sid="9817853538399388">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7083874939912524" type="PlayerBullet">
+                    <param id="0" name="Object">EnemyBullet</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3607108283329792" type="EnemyBullet" />
+                <action id="-9" name="Destroy" sid="6049559866329047" type="PlayerBullet" />
+            </actions>
+        </event-block>
+        <event-block sid="2600891830899053">
+            <conditions>
+                <condition id="-18" name="On created" sid="352367486960631" type="EnemyBullet" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="1736347051868312" type="EnemyBullet">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7317417312927719">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="9311871996119826" type="EnemyCat">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">Player.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="9795116495294863" type="EnemyCat">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2333499601252411">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="4895749241614083" type="EnemyCat">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">Player.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="6990753819149183" type="EnemyCat">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3202548233510932">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1058773280017893" type="Player">
+                    <param id="0" name="Object">Cheese</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="3545304791743484" type="System">
+                    <param id="0" name="Variable">scores</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="0" name="Set text" sid="8957691607251912" type="score">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; scores</param>
+                </action>
+                <action id="-9" name="Destroy" sid="391799515577973" type="Cheese" />
+            </actions>
+        </event-block>
+        <event-block sid="5705226034072982">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6002728124331992" type="Player">
+                    <param id="0" name="Object">DoorToLevel2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="4762866762849768" type="System">
+                    <param id="0" name="Layout">&quot;MainMenu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5928110985732446">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3474975412560966" type="Player">
+                    <param id="0" name="Object">TopOfDoor</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="3159615605882664" type="System">
+                    <param id="0" name="Layout">&quot;MainMenu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
