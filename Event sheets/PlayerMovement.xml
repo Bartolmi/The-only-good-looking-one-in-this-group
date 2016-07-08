@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlayerMovement</name>
+    <events>
+        <event-block sid="3454492539542774">
+            <conditions>
+                <condition id="2" name="Key is down" sid="8431033871650634" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6816457538040422" type="Player">
+                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="95091154176031" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="3534947325076831" type="EnemyCat">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6216080296855562">
+            <conditions>
+                <condition id="2" name="Key is down" sid="3626678154592879" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="754926989744991" type="Player">
+                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="6672922098838037" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="5270462103762273" type="EnemyCat">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3793519610176823">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="1859618075164241" type="Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8277342179434329" type="Player">
+                    <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="4407173804803082" type="EnemyCat">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5054593906160407">
+            <conditions>
+                <condition id="3" name="On key released" sid="478801349792661" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="453779665059588" type="Player">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="9546611961593584" type="EnemyCat">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8398113170614118">
+            <conditions>
+                <condition id="3" name="On key released" sid="1273914027637027" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2292855909744252" type="Player">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="5804912944516302" type="EnemyCat">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3924341736265809">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" sid="1184568241924197" type="Player" />
+                <condition id="2" name="Is playing" sid="686378154564509" type="Player">
+                    <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2277417155032795" type="Player">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="4838088073479614" type="EnemyCat">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>miniGameEventSheet</name>
+    <events>
+        <variable constant="0" name="countDown" sid="8409329996207725" static="0" type="number">90</variable>
+        <variable constant="0" name="score" sid="4244495620556153" static="0" type="number">0</variable>
+        <event-block sid="4254547301112754">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7788786256850939" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="8574725054097371" type="System">
+                    <param id="0" name="Width">840</param>
+                    <param id="1" name="Height">480</param>
+                </action>
+                <action disabled="1" id="-36" name="Save" sid="481006541500799" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9273383960351548">
+            <conditions>
+                <condition id="2" name="Key is down" sid="9861315014725219" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2731342514111652" type="Player">
+                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="7695004913030532" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="2801724025094366" type="EnemyCat">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2497620556040927">
+            <conditions>
+                <condition id="2" name="Key is down" sid="3587476402030995" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1000171347768541" type="Player">
+                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="8552464553909964" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="4411418282429752" type="EnemyCat">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5817837464751642">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="4815676150875533" type="Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7777693200710501" type="Player">
+                    <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="2453154414504667" type="EnemyCat">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1065292639826757">
+            <conditions>
+                <condition id="3" name="On key released" sid="498593890756694" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6862023081340341" type="Player">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="1763024393140224" type="EnemyCat">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6872947322632361">
+            <conditions>
+                <condition id="3" name="On key released" sid="7600243521369987" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1460959042182616" type="Player">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="8523209485193833" type="EnemyCat">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5667428045967433">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" sid="8525905003657439" type="Player" />
+                <condition id="2" name="Is playing" sid="750550546860639" type="Player">
+                    <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="509968919918531" type="Player">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="6409552345485963" type="EnemyCat">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="658827685193633">
+            <conditions>
+                <condition id="0" name="On click" sid="3822628567306047" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="9041383724809524" type="Player">
+                    <param id="0" name="Object">PlayerBullet</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6956904684317081">
+            <conditions>
+                <condition id="-18" name="On created" sid="3190402752706773" type="PlayerBullet" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="6476645827516001" type="PlayerBullet">
+                    <param id="0" name="X">mouse.X</param>
+                    <param id="1" name="Y">mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="6753300801425433">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="330745189371318" type="Player">
+                    <param id="0" name="Object">Cheese</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="9652954566939529" type="PlayerBullet">
+                    <param id="0" name="Object">Cheese</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4148314308983102" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">score+10</param>
+                </action>
+                <action id="0" name="Set text" sid="9450640478546917" type="miniGameScore">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; score </param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="8518620649885519">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="2703929459272355" type="Cheese">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="8075893812259025" type="Cheese">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="5905544704746907" type="Cheese">
+                    <param id="0" name="Object">PlayerBullet</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="6300884911957661" type="Cheese">
+                    <param id="0" name="Y">random(LayoutHeight-140, 70)</param>
+                </action>
+                <action id="-1" name="Set X" sid="6930463128156764" type="Cheese">
+                    <param id="0" name="X">random(LayoutWidth-140, 70)</param>
+                </action>
+                <action id="-9" name="Destroy" sid="8355171531970239" type="PlayerBullet" />
+            </actions>
+        </event-block>
+        <event-block sid="7579050529010434">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9335213565386771" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="254223358505798" type="miniGameScore">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="7596730184986969" type="miniGameTime">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5544897442243499">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="6347127141689129" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="7266928223297354" type="System">
+                    <param id="0" name="Variable">countDown</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="2551627325801196" type="miniGameTime">
+                    <param id="0" name="Text">&quot;Time: &quot; &amp; countDown</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9830692787544321">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5538068573962439" type="System">
+                    <param id="0" name="Variable">countDown</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" disabled="1" id="0" name="Set ignoring input" sid="6248931339608028" type="Player">
+                    <param id="0" name="Input">1</param>
+                </action>
+                <action disabled="1" id="-9" name="Set value" sid="2099109257941093" type="System">
+                    <param id="0" name="Variable">countDown</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="8303967495059033" type="Sprite4">
+                    <param id="0" name="X">875</param>
+                    <param id="1" name="Y">512</param>
+                </action>
+                <action id="-3" name="Set position" sid="9168871060476974" type="MiniGamePlayAgain">
+                    <param id="0" name="X">300</param>
+                    <param id="1" name="Y">300</param>
+                </action>
+                <action id="-3" name="Set position" sid="6646738791845073" type="miniGameMainMenu">
+                    <param id="0" name="X">1135</param>
+                    <param id="1" name="Y">300</param>
+                </action>
+                <action id="-28" name="Set canvas size" sid="4585717477025489" type="System">
+                    <param id="0" name="Width">1708</param>
+                    <param id="1" name="Height">960</param>
+                </action>
+                <action id="0" name="Set text" sid="6153964606241806" type="miniGameScore">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="4407323966220071" type="miniGameTime">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="2886202699037197" type="miniGameFinalScore">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; score</param>
+                </action>
+                <action id="-3" name="Set position" sid="5271677553505154" type="miniGameFinalScore">
+                    <param id="0" name="X">700</param>
+                    <param id="1" name="Y">500</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9966451647162459" type="PlayerBullet" />
+                <action id="-13" name="Set time scale" sid="3704110888670672" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action behavior="8Direction" disabled="1" id="0" name="Stop" sid="2330269386647383" type="Player" />
+                <action disabled="1" id="2" name="Stop" sid="8790809442802554" type="Player" />
+            </actions>
+        </event-block>
+        <event-block sid="1441767588536339">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9711213778331115" type="PlayerBullet">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="915864108387799" type="PlayerBullet" />
+            </actions>
+        </event-block>
+        <event-block sid="5892050460193231">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5094632294773374" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">miniGameMainMenu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="1794157508916314" type="System" />
+                <action id="-25" name="Go to layout (by name)" sid="8804166341486713" type="System">
+                    <param id="0" name="Layout">&quot;MainMenu&quot;</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="9146907288434702" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5629458547677555">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="7153818558253666" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">MiniGamePlayAgain</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="2923233052802763" type="System" />
+                <action disabled="1" id="-37" name="Load" sid="5116908947837714" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+                <action id="-28" name="Set canvas size" sid="5148987566448267" type="System">
+                    <param id="0" name="Width">840</param>
+                    <param id="1" name="Height">480</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="3987034560923869" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="825215798348569" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

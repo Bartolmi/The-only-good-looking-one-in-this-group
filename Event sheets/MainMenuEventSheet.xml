@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainMenuEventSheet</name>
+    <events>
+        <event-block sid="3065830913576797">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7032671265655399" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set canvas size" sid="7847648873304646" type="System">
+                    <param id="0" name="Width">1708</param>
+                    <param id="1" name="Height">960</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1797502982844699">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="7515524586913673" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">MiniGameButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="1901479040645049" type="System">
+                    <param id="0" name="Layout">miniGame</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4584775202183104">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4226191516422055" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">TutorialButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="6550488379830966" type="System">
+                    <param id="0" name="Layout">&quot;Turtorial&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6891138796280128">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="7002063224844636" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">StoryButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="4496094303059068" type="System">
+                    <param id="0" name="Layout">&quot;text 1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

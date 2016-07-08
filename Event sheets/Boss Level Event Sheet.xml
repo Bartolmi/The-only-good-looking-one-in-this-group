@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Boss Level Event Sheet</name>
+    <events>
+        <event-block sid="3464467255044306">
+            <conditions>
+                <condition id="2" name="Key is down" sid="9177331942521923" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8304307161680781" type="Player">
+                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="6206015384589468" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="9067833492363838" type="Tommy">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9836282028982337">
+            <conditions>
+                <condition id="2" name="Key is down" sid="9739587223579923" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4816159429170711" type="Player">
+                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="7447573513762182" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="7528702234708254" type="Tommy">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6809851806462316">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="4189817307527711" type="Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8420987352023073" type="Player">
+                    <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="3829881555041902" type="Tommy">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6244159786108557">
+            <conditions>
+                <condition id="3" name="On key released" sid="8956606151392717" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1645341223771745" type="Player">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="9780799190726541" type="Tommy">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7144487575689161">
+            <conditions>
+                <condition id="3" name="On key released" sid="770708690025875" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7990924210119827" type="Player">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="3062804101255513" type="Tommy">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6959216542955909">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" sid="9725026846338005" type="Player" />
+                <condition id="2" name="Is playing" sid="7587513012018635" type="Player">
+                    <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4886822401910113" type="Player">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="2921879815015511" type="Tommy">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2901357449183219">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6174870189616351" type="Player">
+                    <param id="0" name="Object">Spikes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="6497826746708379" type="System" />
+                <action id="-9" name="Set value" sid="8492183186001984" type="System">
+                    <param id="0" name="Variable">scores</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5694874148723608">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4836045196867769" type="Player">
+                    <param id="0" name="Object">Tommy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="1189759551148398" type="System" />
+                <action id="-9" name="Set value" sid="9715888174570742" type="System">
+                    <param id="0" name="Variable">scores</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3368121828233221">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3012342945709389" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Timer" id="0" name="Start timer" sid="4031733207699293" type="Tommy">
+                    <param id="0" name="Duration">1.0</param>
+                    <param id="1" name="Type">1</param>
+                    <param id="2" name="Tag">&quot;Shoot&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7993258540873413">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="1177021372200223" type="Tommy">
+                    <param id="0" name="Tag">&quot;Shoot&quot;</param>
+                </condition>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="964474716839084" type="Tommy">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="2696564725488712" type="Tommy">
+                    <param id="0" name="Object">EnemyBullet</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="5541013253791276" type="EnemyBullet">
+                    <param id="0" name="Angle">180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7834116511079461">
+            <conditions>
+                <condition id="0" name="On click" sid="2494380133496088" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="3766050168344245" type="Player">
+                    <param id="0" name="Object">PlayerBullet</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2391574393255246">
+            <conditions>
+                <condition id="-18" name="On created" sid="7425775050885391" type="PlayerBullet" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="7126391361866281" type="PlayerBullet">
+                    <param id="0" name="X">mouse.X</param>
+                    <param id="1" name="Y">mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7637702479058071">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2939402030784302" type="Player">
+                    <param id="0" name="Object">EnemyBullet</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="7614487248720069" type="System" />
+                <action id="-9" name="Set value" sid="6425228370277819" type="System">
+                    <param id="0" name="Variable">scores</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4899185233265701">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3468143406704591" type="Tommy">
+                    <param id="0" name="Object">PlayerBullet</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="4387806706942325" type="Tommy">
+                    <param id="0" name="Instance variable">Lives</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="3776801086215761" type="PlayerBullet" />
+            </actions>
+        </event-block>
+        <event-block sid="5889318613586641">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="9270019436697354" type="Tommy">
+                    <param id="0" name="Instance variable">Lives</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4276609730426011" type="Tommy" />
+                <action id="0" name="Spawn another object" sid="4490935761034198" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="3497918585198641" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="2218199459754418" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="3125169186496153" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="7444282066639274" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="1638831446581273" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="8643358890182" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="1002586818845838" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="7792915711566352" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="9592354616943074" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="6864819301333941" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="9171175442085635" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="4081894681554525" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="9852490566846336" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="7098331426505226" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="455817207908004" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="98800994636967" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="4610636769319507" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="2225279048414969" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="9163018539303439" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="7962095804267137" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="1742304974609481" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="1889881652013658" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="1686528144323171" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="1684982977783821" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="6776929483563467" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="937153400684458" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="2584484446807981" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="1721434449986701" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="1921743885461443" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="7132386401890463" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="1017221150723188" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="2296244960899545" type="Tommy">
+                    <param id="0" name="Object">Cheese</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7576126211224083">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8091401322698407" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="1157765366357945" type="score">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2544858295054082">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1115407679825895" type="PlayerBullet">
+                    <param id="0" name="Object">Earth</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8354303794555871" type="PlayerBullet" />
+            </actions>
+        </event-block>
+        <event-block sid="5923021063072014">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4398523280050179" type="EnemyBullet">
+                    <param id="0" name="Object">Earth</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8629425383990181" type="EnemyBullet" />
+                <action id="-9" name="Destroy" sid="3507050124000109" type="Earth" />
+            </actions>
+        </event-block>
+        <event-block sid="8674358534478484">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3176201606268498" type="PlayerBullet">
+                    <param id="0" name="Object">EnemyBullet</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7238873530067385" type="EnemyBullet" />
+                <action id="-9" name="Destroy" sid="9725632586676951" type="PlayerBullet" />
+            </actions>
+        </event-block>
+        <event-block sid="3152516301056774">
+            <conditions>
+                <condition id="-18" name="On created" sid="9004346962162957" type="EnemyBullet" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="6021400912725864" type="EnemyBullet">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8026909679106013">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="900880653533841" type="Tommy">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">Player.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="368000062920174" type="Tommy">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8797979663063345">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="5817370391916197" type="Tommy">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">Player.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="4822457808381912" type="Tommy">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="916920495106409">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="376793571363743" type="Player">
+                    <param id="0" name="Object">Cheese</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="3902293432564533" type="System">
+                    <param id="0" name="Variable">scores</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="0" name="Set text" sid="7374405143833619" type="score">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; scores</param>
+                </action>
+                <action id="-9" name="Destroy" sid="4239697838564527" type="Cheese" />
+                <action id="-25" name="Go to layout (by name)" sid="9605931061078664" type="System">
+                    <param id="0" name="Layout">&quot;MainMenu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

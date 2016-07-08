@@ -3,153 +3,30 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <variable constant="0" name="countDown" sid="8409329996207725" static="0" type="number">90</variable>
-        <variable constant="0" name="score" sid="4244495620556153" static="0" type="number">0</variable>
-        <event-block sid="1541676519709781">
+        <event-block sid="2358116792220737">
             <conditions>
-                <condition id="0" name="On key pressed" sid="4661098265509624" type="Keyboard">
-                    <param id="0" name="Key">68 (D)</param>
-                </condition>
+                <condition id="-2" name="On start of layout" sid="4709900453217213" type="System" />
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="5291918720608789" type="Sprite2">
-                    <param id="0" name="Control">1</param>
+                <action id="-28" name="Set canvas size" sid="5953086893436661" type="System">
+                    <param id="0" name="Width">840</param>
+                    <param id="1" name="Height">480</param>
+                </action>
+                <action disabled="1" id="-36" name="Save" sid="9618682251892128" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="9796179364480798">
+        <event-block sid="8772394882401759">
             <conditions>
-                <condition id="0" name="On key pressed" sid="1062662346638595" type="Keyboard">
-                    <param id="0" name="Key">65 (A)</param>
+                <condition id="0" name="On click" sid="2116697239238313" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="7752240040983793" type="Sprite2">
-                    <param id="0" name="Control">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="9017818567531567">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="3140082201912633" type="Keyboard">
-                    <param id="0" name="Key">87 (W)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="2633618985881814" type="Sprite2">
-                    <param id="0" name="Control">2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6753300801425433">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="330745189371318" type="Sprite2">
-                    <param id="0" name="Object">Sprite3</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="4148314308983102" type="System">
-                    <param id="0" name="Variable">score</param>
-                    <param id="1" name="Value">score+10</param>
-                </action>
-                <action id="0" name="Set text" sid="9450640478546917" type="Text">
-                    <param id="0" name="Text">&quot;Score: &quot; &amp; score </param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="8518620649885519">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="2703929459272355" type="Sprite3">
-                    <param id="0" name="Object">Sprite</param>
-                </condition>
-                <condition id="1" name="Is overlapping another object" sid="8075893812259025" type="Sprite3">
-                    <param id="0" name="Object">Sprite2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Set Y" sid="6300884911957661" type="Sprite3">
-                    <param id="0" name="Y">random(LayoutHeight-140, 70)</param>
-                </action>
-                <action id="-1" name="Set X" sid="6930463128156764" type="Sprite3">
-                    <param id="0" name="X">random(LayoutWidth-140, 70)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="7579050529010434">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="9335213565386771" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="Pin" id="0" name="Pin to object" sid="254223358505798" type="Text">
-                    <param id="0" name="Pin to">Sprite2</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="7596730184986969" type="Text2">
-                    <param id="0" name="Pin to">Sprite2</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5544897442243499">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="6347127141689129" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="7266928223297354" type="System">
-                    <param id="0" name="Variable">countDown</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="0" name="Set text" sid="2551627325801196" type="Text2">
-                    <param id="0" name="Text">&quot;Time: &quot; &amp; countDown</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="9830692787544321">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="5538068573962439" type="System">
-                    <param id="0" name="Variable">countDown</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="0" name="Set ignoring input" sid="6248931339608028" type="Sprite2">
-                    <param id="0" name="Input">1</param>
-                </action>
-                <action id="-9" name="Set value" sid="2099109257941093" type="System">
-                    <param id="0" name="Variable">countDown</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-3" name="Set position" sid="8303967495059033" type="Sprite4">
-                    <param id="0" name="X">875</param>
-                    <param id="1" name="Y">512</param>
-                </action>
-                <action id="-3" name="Set position" sid="9168871060476974" type="Text3">
-                    <param id="0" name="X">300</param>
-                    <param id="1" name="Y">300</param>
-                </action>
-                <action id="-3" name="Set position" sid="6646738791845073" type="Text4">
-                    <param id="0" name="X">1135</param>
-                    <param id="1" name="Y">300</param>
-                </action>
-                <action id="-28" name="Set canvas size" sid="4585717477025489" type="System">
-                    <param id="0" name="Width">1708</param>
-                    <param id="1" name="Height">960</param>
-                </action>
-                <action id="0" name="Set text" sid="6153964606241806" type="Text">
-                    <param id="0" name="Text">&quot;&quot;</param>
-                </action>
-                <action id="0" name="Set text" sid="4407323966220071" type="Text2">
-                    <param id="0" name="Text">&quot;&quot;</param>
-                </action>
-                <action id="0" name="Set text" sid="2886202699037197" type="Text5">
-                    <param id="0" name="Text">&quot;Score: &quot; &amp; score</param>
-                </action>
-                <action id="-3" name="Set position" sid="5271677553505154" type="Text5">
-                    <param id="0" name="X">700</param>
-                    <param id="1" name="Y">500</param>
+                <action id="-25" name="Go to layout (by name)" sid="2809647946570526" type="System">
+                    <param id="0" name="Layout">&quot;text 2&quot;</param>
                 </action>
             </actions>
         </event-block>
