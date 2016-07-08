@@ -200,8 +200,22 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Constuct 2\Sprites\Platformer pack\Base pack\Tiles\grassHalfLeft.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Constuct 2\Sprites\Platformer pack\Base pack\Tiles\grassHalfMid.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Constuct 2\Sprites\Platformer pack\Base pack\Tiles\grassHalfRight.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Constuct 2\Sprites\Platformer pack\Base pack\Tiles\grassHillLeft.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Constuct 2\Sprites\Platformer pack\Base pack\Tiles\grassHillRight.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Constuct 2\Sprites\Platformer pack\Base pack\Tiles\grassHillLeft.png">
+                        <collision-poly>
+                            <point x="0.414286" y="0.585714" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Constuct 2\Sprites\Platformer pack\Base pack\Tiles\grassHillRight.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.528571" y="0.514286" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Constuct 2\Sprites\Platformer pack\Base pack\Tiles\grassLeft.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Constuct 2\Sprites\Platformer pack\Base pack\Tiles\grassMid.png" />
                 </animation>
@@ -665,7 +679,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite12" sid="5058550555503877">
+        <object-type name="catStory" sid="5058550555503877">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2092888841414403" speed="5">
@@ -745,7 +759,14 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3028681084466967" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.500368" original-source="D:\Final Project\hola-me-llamo-miguel\images\mouse-1009344_1920.jpg" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500368" original-source="D:\Final Project\hola-me-llamo-miguel\images\mouse-1009344_1920.jpg">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -815,6 +836,47 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite23" sid="6778137597134165">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1707511006458989" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tommyStory" sid="8508283128090188">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9597922577334902" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Final Project\hola-me-llamo-miguel\Animations\Tommy\Default\000.png">
+                        <collision-poly>
+                            <point x="0.348095" y="0.487333" />
+                            <point x="0.5" y="0.471333" />
+                            <point x="0.712857" y="0.402" />
+                            <point x="0.78381" y="0.5" />
+                            <point x="0.688571" y="0.564" />
+                            <point x="0.5" y="0.627333" />
+                            <point x="0.339524" y="0.524667" />
+                            <point x="0.305714" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite12" sid="3462722763870186">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="112569915021813" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text2" sid="2833238765439437">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text3" sid="1228497297226428">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="fullscreen" plugin-id="Sprite" sid="4340601450776242">
@@ -838,6 +900,7 @@
         <layout>text 5.xml</layout>
         <layout>Turtorial.xml</layout>
         <layout>Boss Level.xml</layout>
+        <layout>FinalStory.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>miniGameEventSheet.xml</event-sheet>
@@ -852,6 +915,7 @@
         <event-sheet>MainMenuEventSheet.xml</event-sheet>
         <event-sheet>TutorialEventSheet.xml</event-sheet>
         <event-sheet>Event sheet 6.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="139" />
